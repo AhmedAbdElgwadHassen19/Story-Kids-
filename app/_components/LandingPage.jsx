@@ -1,3 +1,4 @@
+import { SignedIn, SignedOut } from '@clerk/nextjs'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -11,7 +12,12 @@ export default function LandingPage() {
             <p className="text-gray-600">
                 Generate unique and personalized kids Stories powered by Ai MKE STORY TIME Magical and exciting for your child
             </p>
-            <Link className="bg-[#c9749d] px-6 py-3 hover:bg-[#db8cb8] transition" href="/">Create Your Story</Link>
+            <SignedIn>
+              <Link href="/dashboard" className='bg-[#c9749d] px-6 py-3 hover:bg-[#db8cb8] transition'>Dashboard</Link>
+            </SignedIn>
+            <SignedOut>
+              <Link href="/sign-in" className='bg-[#c9749d] px-6 py-3 hover:bg-[#db8cb8] transition'>Get Started </Link>
+            </SignedOut>
         </div>
         <div className="relative w-full h-[300px]">
                 <Image src="/hero.png" alt="hero" fill className="object-contain" />

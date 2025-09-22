@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Banner from '../_components/Banner'
 import { Loader2 } from 'lucide-react'
 import Link from 'next/link'
-
+import imag from "../../../public/banner.png"
 export default function MyStoriesPage() {
 
     const [stories , setStories]= useState([])
@@ -90,11 +90,7 @@ export default function MyStoriesPage() {
             {FilterStory.length > 0 ? FilterStory.map((story) => (
                 <Link href={`/dashboard/story/${story.storyId}`} key={story.storyId}>
                 <div className="border p-4 rounded shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ">
-                    {story?.imageURL ? (
-                        <img className="w-full h-48 object-cover mb-4" src={story.imageURL} alt="image Story" />
-                    ) : (
-                        <div className="w-full h-48 bg-gray-100 mb-4 flex items-center justify-center text-gray-400">No image</div>
-                    )}
+                    <img className="w-full h-48 object-cover mb-4" src={imag} alt="image Story" />
 
                     <div className="p-4">
                         <h2 className="text-xl font-semibold mb-2 truncate text-[#c9749d]">{story?.content?.story.title }</h2>

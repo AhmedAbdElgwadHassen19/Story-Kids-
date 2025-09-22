@@ -6,7 +6,7 @@ function Banner() {
   <div>
     <h2 className="text-2xl font-bold">✨ Unleash Your Imagination… Create a New Adventure for Your Child!</h2>
     <p className="mt-2">Generate fun, age-appropriate stories in seconds with AI.</p>
-    <button className="mt-4 bg-white text-purple-600 px-4 py-2 rounded-lg shadow hover:bg-purple-50 transition">
+    <button onClick={() => router.push("/dashboard/new-story")} className="mt-4 bg-white text-purple-600 px-4 py-2 rounded-lg shadow hover:bg-purple-50 transition">
       Start a New Story
     </button>
   </div>

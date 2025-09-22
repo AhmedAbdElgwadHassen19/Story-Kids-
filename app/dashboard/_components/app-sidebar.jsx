@@ -22,7 +22,6 @@ export function AppSidebar() {
   const menu = [
   { title: "Dashboard", path: "/dashboard", icon: LayoutDashboard },
   { title: "My Stories", path: "/dashboard/my-stories", icon: BookOpen },
-  { title: "Settings", path: "#", icon: Settings },
   ]
   return (
     <Sidebar>

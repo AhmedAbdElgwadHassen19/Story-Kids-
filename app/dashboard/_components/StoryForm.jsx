@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-
 function StoryForm() {
   const storyType = [
     { title: "Story Book", image: "/storybook.png" },
@@ -84,6 +83,7 @@ function StoryForm() {
             }
           }}
           className="w-full p-2 border border-gray-300 rounded"
+          
         />
         {errors.storySubject && (
           <p className="text-red-500 text-sm mt-1">{errors.storySubject}</p>
@@ -107,7 +107,7 @@ function StoryForm() {
               <img
                 src={type.image}
                 alt={type.title}
-                className={`w-24 h-24 object-contain mb-2 ${
+                className={`w-full h-48 object-cover rounded-t-lg ${
                   selectedType === type.title
                     ? "grayscale-0"
                     : "grayscale hover:grayscale-0"

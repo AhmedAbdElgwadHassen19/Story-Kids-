@@ -1,6 +1,7 @@
 import React from 'react'
-
+import { useRouter } from 'next/navigation';
 function Banner() {
+  const router = useRouter();
   return (
     <div className="bg-gradient-to-r from-purple-500 to-pink-400 text-white p-6 rounded-2xl flex items-center justify-between shadow-lg">
   <div>

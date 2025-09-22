@@ -69,7 +69,7 @@ export default function StoryDetails() {
     <>
         <div className='max-w-6xl mx-auto p-6 flex md:flex-row gap-10 mt-10'>
         <div className="md:w-1/2 flex justify-center items-start">
-            <img src= "/funny.png" alt="Kids Story" className="rounded-lg object-cover w-full max-h-[500px]"/>
+            <img src= "/funny.png" alt="Kids Story" className="rounded-lg object-cover w-full h-full"/>
         </div>
         <div className="md:w-1/2 flex flex-col justify-start items-start">
             <h1 className='text-2xl font-bold text-[#c9749d]'><strong>Title: </strong> {story?.Content?.story?.title}</h1>

@@ -89,7 +89,7 @@ export default function MyStoriesPage() {
             {FilterStory.length > 0 ? FilterStory.map((story) => (
                 <Link href={`/dashboard/story/${story.storyId}`} key={story.storyId}>
                 <div className="border p-4 rounded shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 ">
-                    <img className="w-full h-full object-cover mb-4" src= "/child.png" alt="image Story" />
+                    <img className="w-full h-auto mb-4 object-contain" src= "/child.jpg" alt="image Story" />
 
                     <div className="p-4">
                         <h2 className="text-xl font-semibold mb-2 truncate text-[#c9749d]">{story?.content?.story.title }</h2>
